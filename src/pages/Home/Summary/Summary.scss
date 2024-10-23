@@ -1,0 +1,168 @@
+@import "../../../_variables.scss";
+
+.home-summary {
+  display: grid;
+  // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
+  // grid-template-rows: repeat(5, 1fr);
+  gap: 25px;
+
+  .box {
+    // border: 1px solid #eee;
+    border-radius: 20px;
+    padding: 20px;
+    aspect-ratio: 5/4;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    width: 100%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background: $linear-gradient-box;
+    background-size: 200% 200%;
+    background-position: 100% 100%;
+    transition: all 0.6s;
+
+    &:hover {
+      background-position: 0% 0%;
+    }
+
+    .title {
+      font-family: "poppins-bold";
+      font-size: 60px;
+      color: #eee;
+    }
+    .title-2 {
+      font-size: 30px;
+      color: #aaa;
+    }
+    .desc-group {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .desc {
+      font-family: "poppins";
+      font-size: 15px;
+      color: #aaa;
+    }
+  }
+  .box-1 {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .box-2 {
+    grid-area: 1 / 2 / 2 / 3;
+
+    .title {
+      font-size: 30px;
+    }
+  }
+  .box-3 {
+    grid-area: 1 / 3 / 3 / 5;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 40px;
+
+    .title {
+      font-size: 25px;
+    }
+  }
+
+  .box-4 {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .box-5 {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  .box-6 {
+    grid-area: 3 / 1 / 5 / 3;
+    gap: 50px;
+
+    &:hover {
+      .logo-container > .logo > .badge {
+        width: 100px;
+        translate: 50px -10px;
+        gap: 8px;
+
+        .years {
+          width: 100%;
+        }
+      }
+    }
+
+    .title {
+      font-size: 40px;
+    }
+
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 80px;
+
+      .logo {
+        height: 120px;
+        $br-1: 40px;
+        $br-2: 10px;
+
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          border-radius: $br-1 $br-2 $br-1 $br-2;
+          overflow: hidden;
+        }
+
+        .badge {
+          position: absolute;
+          right: 0;
+          top: 0;
+          background: rgb(187, 1, 1);
+          padding: 5px 10px;
+          translate: 10px -10px;
+          $dmn: 35px;
+          border-radius: $dmn;
+          width: $dmn;
+          height: $dmn;
+          transition: all 0.5s;
+
+          span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          .num {
+            font-weight: bold;
+          }
+
+          .years {
+            width: 0;
+            overflow: hidden;
+            transition: all 0.5s;
+          }
+        }
+      }
+    }
+  }
+  .box-7 {
+    grid-area: 3 / 3 / 4 / 4;
+  }
+  .box-8 {
+    grid-area: 3 / 4 / 4 / 5;
+  }
+  .box-9 {
+    grid-area: 4 / 3 / 5 / 4;
+  }
+  .box-10 {
+    grid-area: 4 / 4 / 5 / 5;
+  }
+}

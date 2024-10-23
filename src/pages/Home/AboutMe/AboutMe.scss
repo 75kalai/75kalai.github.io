@@ -1,0 +1,24 @@
+#about-me {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  & > [class^="about-me-content-"] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .left,
+    .right {
+      // width: 50%;
+    }
+
+    .text-content {
+      width: 70%;
+      margin: 40px;
+      padding: 60px 30px;
+      border-radius: 10px;
+      background: linear-gradient(145deg, #2c2c2c, #161616);
+    }
+  }
+}

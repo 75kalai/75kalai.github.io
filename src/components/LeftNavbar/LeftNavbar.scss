@@ -1,0 +1,91 @@
+@import "../../_variables.scss";
+
+#left-navbar {
+  background: #111111;
+  height: 100vh;
+  width: min(40%, 400px);
+  flex-shrink: 0;
+  padding-top: 75px;
+  gap: 75px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: auto;
+
+  &:hover {
+    .title > .logo {
+      outline: 3px solid #cecece;
+    }
+  }
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 50px;
+
+    .logo {
+      $dimension: 200px;
+      width: $dimension;
+      height: $dimension;
+      border: 4px solid transparent;
+      outline: 3px solid #fff3;
+      overflow: hidden;
+      border-radius: 50%;
+      transition: all $transition-duration;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: all $transition-duration;
+
+        &:hover {
+          transform: scale(2);
+        }
+      }
+    }
+
+    .name {
+      font-family: "poppins-extra-bold";
+      font-weight: 700;
+      font-size: 30px;
+    }
+
+    .location {
+      display: flex;
+      gap: 10px;
+    }
+  }
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: calc(100% - 100px);
+    gap: 20px;
+
+    a {
+      padding: 15px 20px;
+      border-left: 4px solid transparent;
+      transition: all $transition-duration;
+      border-radius: 5px;
+      cursor: pointer;
+      width: calc(100% - 50px);
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 20px;
+      padding-left: 30px;
+
+      &:hover {
+        background: #333;
+        border-left: 4px solid #eee;
+      }
+    }
+  }
+}
