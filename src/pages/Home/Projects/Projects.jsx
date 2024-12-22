@@ -4,12 +4,10 @@ import { useState } from "react";
 import { Timeline } from "antd";
 import { CaretRightFilled } from "@ant-design/icons";
 
-import wiproLogo from "../../../assets/Wipro_Logo_Bg.avif";
-import ctsLogo from "../../../assets/Cognizant_Logo_Bg.jpg";
-import { projectData } from "./projectData";
+import DATA from "@/data";
 
 export default function Projects() {
-  const timelineItems = projectData.map((project, index) => {
+  const timelineItems = DATA.PROJECTS.map((project, index) => {
     return {
       key: crypto.randomUUID(),
       // position: index % 2 === 0 ? "left" : "right",
@@ -29,6 +27,7 @@ export default function Projects() {
 
 function ProjectDescription({
   company,
+  logoPath,
   title,
   client,
   duration,
@@ -38,8 +37,6 @@ function ProjectDescription({
   responsibilities,
 }) {
   const [isExpanded, setIsExpanded] = useState(false);
-
-  const companyLogo = company === "wipro" ? wiproLogo : ctsLogo;
 
   return (
     <div
@@ -52,7 +49,7 @@ function ProjectDescription({
             <b>Company: </b>
             <img
               className="company-logo"
-              src={companyLogo}
+              src={logoPath}
               alt="compamy-logo"
             />
           </h2>

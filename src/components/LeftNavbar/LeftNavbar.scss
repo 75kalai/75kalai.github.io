@@ -5,8 +5,9 @@
   height: 100vh;
   width: min(40%, 400px);
   flex-shrink: 0;
-  padding-top: 75px;
-  gap: 75px;
+  $gap:75px;
+  padding: $gap 10px $gap;
+  gap: $gap;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -53,6 +54,7 @@
       font-family: "poppins-extra-bold";
       font-weight: 700;
       font-size: 30px;
+      text-transform: uppercase;
     }
 
     .location {

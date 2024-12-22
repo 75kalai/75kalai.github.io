@@ -1,4 +1,5 @@
 import "./Home.scss";
+import DATA from "@/data"
 
 import TopNavbar from "../../components/TopNavbar/TopNavbar";
 import LeftNavbar from "../../components/LeftNavbar/LeftNavbar";
@@ -9,8 +10,10 @@ import TechnicalSkills from "./TechnicalSkills/TechnicalSkills";
 import AboutMe from "./AboutMe/AboutMe";
 import Contact from "./Contact/Contact";
 import Resume from "./Resume/Resume";
+import { useEffect } from "react";
 
 export default function Home() {
+
   return (
     <div id="home-page">
       <LeftNavbar />
@@ -18,7 +21,7 @@ export default function Home() {
         <TopNavbar />
         <div className="content">
           <div className="section-1" id="home">
-            <p>Full stack Web Devlopment Expert</p>
+            <p>{DATA.introText}</p>
           </div>
           <div className="section-2" id="summary">
             <Summary />

@@ -37,16 +37,14 @@
       font-size: 30px;
       color: #aaa;
     }
-    .desc-group {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
     .desc {
       font-family: "poppins";
       font-size: 15px;
       color: #aaa;
+
+      &.desc-center {
+        text-align: center;
+      }
     }
   }
   .box-1 {

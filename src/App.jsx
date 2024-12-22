@@ -3,6 +3,7 @@ import { ConfigProvider, theme } from "antd";
 
 import AnimatedCursor from "react-animated-cursor";
 import Home from "./pages/Home/Home";
+import './i18n';
 
 function App() {
   const antThemeConfig = {

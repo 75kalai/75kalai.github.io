@@ -1,5 +1,4 @@
 import "./LeftNavbar.scss";
-import dilipImg from "../../assets/dilip.jpg";
 import {
   HomeOutlined,
   RocketOutlined,
@@ -9,18 +8,19 @@ import {
   BulbOutlined,
   CloudDownloadOutlined,
 } from "@ant-design/icons";
+import DATA from "@/data"
 
 export default function LeftNavbar() {
   return (
     <div id="left-navbar">
       <div className="title">
         <div className="logo">
-          <img src={dilipImg} alt="portrait pic" />
+          <img src={DATA.bio.profilePicPath} alt="portrait pic" />
         </div>
-        <div className="name">DILIP KUMAR</div>
+        <div className="name">{DATA.bio.name}</div>
         <div className="location">
           <EnvironmentOutlined />
-          <span>Chennai, India</span>
+          <span>{DATA.bio.currentLocation}</span>
         </div>
       </div>
       <div className="body">
@@ -54,7 +54,7 @@ export default function LeftNavbar() {
           </span>
           <span className="text">Contact</span>
         </a>
-        <a href="#contact">
+        <a href="#resume">
           <span className="icon">
             <CloudDownloadOutlined />
           </span>
