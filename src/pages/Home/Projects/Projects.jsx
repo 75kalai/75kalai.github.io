@@ -1,26 +1,38 @@
 /* eslint-disable react/prop-types */
 import "./Projects.scss";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Timeline } from "antd";
 import { CaretRightFilled } from "@ant-design/icons";
+import { useMediaQuery } from "react-responsive";
 
 import DATA from "@/data";
 
 export default function Projects() {
-  const timelineItems = DATA.PROJECTS.map((project, index) => {
-    return {
-      key: crypto.randomUUID(),
-      // position: index % 2 === 0 ? "left" : "right",
-      color: index == 0 ? "green" : "blue",
-      label: <div className="project-label">{project.duration}</div>,
-      children: <ProjectDescription {...project} />,
-    };
-  });
+  const isResBelow100px = useMediaQuery({ query: "(max-width: 1400px)" });
+
+  const timelineItems = useMemo(
+    () =>
+      DATA.PROJECTS.map((project, index) => {
+        return {
+          key: crypto.randomUUID(),
+          // position: index % 2 === 0 ? "left" : "right",
+          color: index == 0 ? "green" : "blue",
+          label: isResBelow100px ? undefined : (
+            <div className="project-label">{project.duration}</div>
+          ),
+          children: <ProjectDescription {...project} />,
+        };
+      }),
+    [isResBelow100px, DATA.PROJECTS]
+  );
 
   return (
     <div className="projects">
       <h1 className="section-title center">Projects</h1>
-      <Timeline mode="alternate" items={timelineItems} />
+      <Timeline
+        mode={isResBelow100px ? "left" : "alternate"}
+        items={timelineItems}
+      />
     </div>
   );
 }
@@ -46,19 +58,15 @@ function ProjectDescription({
       <div className={"project-description " + (isExpanded ? "" : "minimized")}>
         {company && (
           <h2 className="company">
-            <b>Company: </b>
-            <img
-              className="company-logo"
-              src={logoPath}
-              alt="compamy-logo"
-            />
+            {/* <b>Company: </b> */}
+            <img className="company-logo" src={logoPath} alt="compamy-logo" />
           </h2>
         )}
         {title && (
-          <h3>
-            <b>Title: </b>
-            {title}
-          </h3>
+          <div className="project-title">
+            <p><b>Project: </b></p>
+            <h3>{title}</h3>
+          </div>
         )}
         {client && (
           <p>
@@ -111,7 +119,10 @@ function ProjectDescription({
           {isExpanded ? (
             <div
               className="button text-button"
-              onClick={() => setIsExpanded(false)}
+              onClick={() => {
+                e.stopPropagation();
+                setIsExpanded(false);
+              }}
             >
               Show Less
             </div>

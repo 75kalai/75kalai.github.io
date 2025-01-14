@@ -1,4 +1,4 @@
-import PORTFOLIO_DATA_TYPE, { _companies, project_type } from "./portfolioDataType";
+import PORTFOLIO_DATA_TYPE, { _companies } from "./portfolioDataType";
 
 const COMPANY:_companies = {
   cogniant:{
@@ -181,23 +181,23 @@ const DILIP_PORTFOLIO_DATA: PORTFOLIO_DATA_TYPE = {
     },
   ],
   TECHNICAL_SKILLS: [
-    { title: "JavaScript", skillLogoImgPath: "/src/assets/dilip/logos/icons8-javascript.svg" },
-    { title: "Angular", skillLogoImgPath: "/src/assets/dilip/logos/angular_gradient.png" },
-    { title: "Redux", skillLogoImgPath: "/src/assets/dilip/logos/icons8-redux.svg" },
-    { title: "Java", skillLogoImgPath: "/src/assets/dilip/logos/icons8-java.svg" },
-    { title: "Spring", skillLogoImgPath: "/src/assets/dilip/logos/spring.svg" },
-    { title: "Spring Boot", skillLogoImgPath: "/src/assets/dilip/logos/icons8-spring-boot.svg" },
-    { title: "Spring Batch", skillLogoImgPath: "/src/assets/dilip/logos/spring batch.png" },
-    { title: "MySQL", skillLogoImgPath: "/src/assets/dilip/logos/icons8-mysql.svg" },
-    { title: "Postgres", skillLogoImgPath: "/src/assets/dilip/logos/icons8-postgres.svg" },
-    { title: "DB2", skillLogoImgPath: "/src/assets/dilip/logos/ibm db2.svg" },
-    { title: "Eclipse", skillLogoImgPath: "/src/assets/dilip/logos/eclipse.svg" },
-    { title: "Spring Tools", skillLogoImgPath: "/src/assets/dilip/logos/spring-tool.svg" },
-    { title: "VS Code", skillLogoImgPath: "/src/assets/dilip/logos/vscode.svg" },
-    { title: "Git", skillLogoImgPath: "/src/assets/dilip/logos/icons8-git.svg" },
-    { title: "GitHub", skillLogoImgPath: "/src/assets/dilip/logos/icons8-git (1).svg" },
-    { title: "GitLab", skillLogoImgPath: "/src/assets/dilip/logos/icons8-gitlab.svg" },
-    { title: "Tortoise SVN", skillLogoImgPath: "/src/assets/dilip/logos/tortoise svn.png" }
+    { title: "JavaScript", skillLogoImgPath: "/src/assets/logos/icons8-javascript.svg" },
+    { title: "Angular", skillLogoImgPath: "/src/assets/logos/angular_gradient.png" },
+    { title: "Redux", skillLogoImgPath: "/src/assets/logos/icons8-redux.svg" },
+    { title: "Java", skillLogoImgPath: "/src/assets/logos/icons8-java.svg" },
+    { title: "Spring", skillLogoImgPath: "/src/assets/logos/spring.svg" },
+    { title: "Spring Boot", skillLogoImgPath: "/src/assets/logos/icons8-spring-boot.svg" },
+    { title: "Spring Batch", skillLogoImgPath: "/src/assets/logos/spring batch.png" },
+    { title: "MySQL", skillLogoImgPath: "/src/assets/logos/icons8-mysql.svg" },
+    { title: "Postgres", skillLogoImgPath: "/src/assets/logos/icons8-postgres.svg" },
+    { title: "DB2", skillLogoImgPath: "/src/assets/logos/ibm db2.svg" },
+    { title: "Eclipse", skillLogoImgPath: "/src/assets/logos/eclipse.svg" },
+    { title: "Spring Tools", skillLogoImgPath: "/src/assets/logos/spring-tool.svg" },
+    { title: "VS Code", skillLogoImgPath: "/src/assets/logos/vscode.svg" },
+    { title: "Git", skillLogoImgPath: "/src/assets/logos/icons8-git.svg" },
+    { title: "GitHub", skillLogoImgPath: "/src/assets/logos/icons8-git (1).svg" },
+    { title: "GitLab", skillLogoImgPath: "/src/assets/logos/icons8-gitlab.svg" },
+    { title: "Tortoise SVN", skillLogoImgPath: "/src/assets/logos/tortoise svn.png" }
   ],
   ABOUT_ME: [
     {

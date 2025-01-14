@@ -1,36 +1,44 @@
 .technical-skills {
-  display: flex;
+  // display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
   flex-wrap: wrap;
+  $x:20px;
+  gap: $x;
+  row-gap: $x;
+  padding: $x;
+  max-height: 100vh;
+  overflow-y: auto;
 
   .box {
-    background: linear-gradient(145deg, #363636, #181818);
+    flex-grow: 1;
+    margin: 0 5px;
     $dmn: 200px;
+    background: linear-gradient(145deg, #363636, #181818);
     width: $dmn;
-    height: 250px;
+    // max-width: 200px;
+    height: 200px;
     border-radius: 10px;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 40px;
+    gap: 15px;
 
     &:hover .img-container > img {
       transform: scale(1.1);
     }
 
     .img-container {
-      $img-dmn: 120px;
+      $img-dmn: 80px;
       width: $img-dmn;
       height: $img-dmn;
 
       img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: contain;
         object-position: center;
         transition: all 0.3s;
       }

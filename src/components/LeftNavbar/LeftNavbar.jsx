@@ -8,58 +8,72 @@ import {
   BulbOutlined,
   CloudDownloadOutlined,
 } from "@ant-design/icons";
-import DATA from "@/data"
+import DATA from "@/data";
+import { Button } from "antd";
+import { MenuFoldOutlined } from "@ant-design/icons";
 
 export default function LeftNavbar() {
+  const closeNavbar = () => {
+    document.getElementById("left-navbar").classList.remove("active");
+  };
+
+  const menus = [
+    {
+      icon: <HomeOutlined />,
+      text: "Home",
+      link: "#home",
+    },
+    {
+      icon: <RocketOutlined />,
+      text: "Projects",
+      link: "#projects",
+    },
+    {
+      icon: <UserOutlined />,
+      text: "Technical Skills",
+      link: "#technical-skills",
+    },
+    {
+      icon: <UserOutlined />,
+      text: "About",
+      link: "#about-me",
+    },
+    {
+      icon: <MessageOutlined />,
+      text: "Contact",
+      link: "#contact",
+    },
+    {
+      icon: <CloudDownloadOutlined />,
+      text: "Resume",
+      link: "#resume",
+    },
+  ];
+
   return (
     <div id="left-navbar">
+      <div className="close" onClick={closeNavbar}>
+        <MenuFoldOutlined />
+      </div>
       <div className="title">
         <div className="logo">
           <img src={DATA.bio.profilePicPath} alt="portrait pic" />
         </div>
-        <div className="name">{DATA.bio.name}</div>
-        <div className="location">
-          <EnvironmentOutlined />
-          <span>{DATA.bio.currentLocation}</span>
+        <div className="details">
+          <div className="name">{DATA.bio.name}</div>
+          <div className="location">
+            <EnvironmentOutlined />
+            <span>{DATA.bio.currentLocation}</span>
+          </div>
         </div>
       </div>
       <div className="body">
-        <a href="#home">
-          <span className="icon">
-            <HomeOutlined />
-          </span>
-          <span className="text">Home</span>
-        </a>
-        <a href="#projects">
-          <span className="icon">
-            <RocketOutlined />
-          </span>
-          <span className="text">Projects</span>
-        </a>
-        <a href="#technical-skills">
-          <span className="icon">
-            <BulbOutlined />
-          </span>
-          <span className="text">Technical Skills</span>
-        </a>
-        <a href="#about-me">
-          <span className="icon">
-            <UserOutlined />
-          </span>
-          <span className="text">About Me</span>
-        </a>
-        <a href="#contact">
-          <span className="icon">
-            <MessageOutlined />
-          </span>
-          <span className="text">Contact</span>
-        </a>
-        <a href="#resume">
-          <span className="icon">
-            <CloudDownloadOutlined />
-          </span>
-          <span className="text">Download Resume</span>
-        </a>
+        {menus.map((menu, index) => (
+          <a href={menu.link} key={index} onClick={closeNavbar}>
+            <span className="icon">{menu.icon}</span>
+            <span className="text">{menu.text}</span>
+          </a>
+        ))}
       </div>
     </div>
   );

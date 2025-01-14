@@ -12,6 +12,7 @@
     transition: background 0.3s linear, scale 0.1s linear, border 0.3s linear;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 
     &:hover {
       background: #0f151a;

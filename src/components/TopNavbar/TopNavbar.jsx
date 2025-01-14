@@ -1,10 +1,24 @@
-import { useMediaQuery } from "react-responsive";
+import "./TopNavbar.scss";
+import { MenuUnfoldOutlined } from "@ant-design/icons";
+// import { useMediaQuery } from "react-responsive";
 
 export default function TopNavbar() {
-  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  // const isMobile = useMediaQuery({ query: "(max-width: 1000px)" });
 
-  if (isMobile) {
-    return <div>TopNavbar</div>;
-  }
-  return null;
+  const onClick = () => {
+    document.querySelector("#left-navbar").classList.toggle("active")
+  };
+
+  // if (isMobile) {
+  //   return (
+  //     <p>hello</p>
+  //   );
+  // }
+  return (
+    <div id="top-navbar">
+      <div className="left" onClick={onClick}>
+        <MenuUnfoldOutlined />
+      </div>
+    </div>
+  );
 }

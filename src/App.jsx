@@ -17,7 +17,7 @@ function App() {
     <div id="app">
       <ConfigProvider theme={antThemeConfig}>
         <Home />
-        <AnimatedCursor />
+        {/* <AnimatedCursor /> */}
       </ConfigProvider>
     </div>
   );

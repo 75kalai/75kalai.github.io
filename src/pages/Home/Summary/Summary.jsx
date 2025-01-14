@@ -6,72 +6,35 @@ function Summary() {
   const { t } = useTranslation();
   return (
     <div className="home-summary">
-      <MiniBox
-        className="box-1"
-        title1={DATA.SUMMARY.box1.title1}
-        title2={DATA.SUMMARY.box1.title2}
-      />
-      <MiniBox
-        className="box-2"
-        title1={DATA.SUMMARY.box2.title1}
-        title2={DATA.SUMMARY.box2.title2}
-      />
+      <MiniBox className="box-1" data={DATA.SUMMARY.box1} />
+      <MiniBox className="box-2" data={DATA.SUMMARY.box2} />
       <SummaryBox
         className="box-3"
         title={DATA.SUMMARY.box3.title}
         content={DATA.SUMMARY.box3.content}
         buttonText={DATA.SUMMARY.box3.button}
       />
-      <MiniBox
-        className="box-4"
-        title1={DATA.SUMMARY.box4.title1}
-        title2={DATA.SUMMARY.box4.title2}
-      />
-      <MiniBox
-        className="box-5"
-        title1={DATA.SUMMARY.box5.title1}
-        title2={DATA.SUMMARY.box5.title2}
-      />
-      <CompaniesBox
-        className="box-6"
-        companies={DATA.SUMMARY.box6}
-      />
-      
-      <MiniBox
-        className="box-7"
-        title1={DATA.SUMMARY.box7.title1}
-        title2={DATA.SUMMARY.box7.title2}
-      />
-      
-      <MiniBox
-        className="box-8"
-        title1={DATA.SUMMARY.box8.title1}
-        title2={DATA.SUMMARY.box8.title2}
-      />
-      
-      <MiniBox
-        className="box-9"
-        title1={DATA.SUMMARY.box9.title1}
-        title2={DATA.SUMMARY.box9.title2}
-      />
-      
-      <MiniBox
-        className="box-10"
-        title1={DATA.SUMMARY.box10.title1}
-        title2={DATA.SUMMARY.box10.title2}
-      />
+      <MiniBox className="box-4" data={DATA.SUMMARY.box4} />
+      <MiniBox className="box-5" data={DATA.SUMMARY.box5} />
+      <CompaniesBox className="box-6" companies={DATA.SUMMARY.box6} />
+      <MiniBox className="box-7" data={DATA.SUMMARY.box7} />
+      <MiniBox className="box-8" data={DATA.SUMMARY.box8} />
+      <MiniBox className="box-9" data={DATA.SUMMARY.box9} />
+      <MiniBox className="box-10" data={DATA.SUMMARY.box10} />
     </div>
   );
 }
 
-function MiniBox({ className, title1, title2 }) {
+function MiniBox({ className, data }) {
+  const onClickHandler= ()=>{
+    if(data.link){
+      window.open(data.link, "_blank");
+    }
+  }
   return (
-    <div className={`box ${className} center`}>
-      <div className="title">{title1}</div>
-      <div
-        className="desc desc-center"
-        dangerouslySetInnerHTML={{ __html: title2 }}
-      />
+    <div className={`box ${className} center ${data.link?"box-link":""}`} onClick={onClickHandler}>
+      <h1 className="title">{data.title1}</h1>
+      <div className="desc desc-center">{data.title2}</div>
     </div>
   );
 }

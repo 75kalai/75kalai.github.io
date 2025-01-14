@@ -1,3 +1,5 @@
+import React from "react";
+
 type PORTFOLIO_DATA_TYPE = {
   bio:{
     name: string;
@@ -50,8 +52,9 @@ export type  _companies = {
 // ------------------------------ SECTION 1 : SUMMARY ------------------------------
 
 export type section_summary_box_type_1 = {
-  title1: string;
-  title2: string;
+  title1: string | React.ReactNode;
+  title2: string | React.ReactNode;
+  link? : undefined | string;
 };
 
 export type section_summary_box_type_2 = {

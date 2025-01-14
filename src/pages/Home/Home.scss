@@ -61,6 +61,45 @@
   }
 }
 
-// #smooth-content {
-//   will-change: transform;
-// }
+@media screen and (max-width: 1200px) {
+  #home-page {
+
+    #top-navbar {
+      display: block;
+    }
+
+    #left-navbar {
+      // display: block;
+      z-index: 50;
+      position: fixed;
+      left: -100%;
+      width: 350px;
+      transition: left 0.25s ease-in;
+      box-shadow: rgb(73 73 73 / 56%) 0px 22px 70px 4px;
+
+      &.active {
+        left: 0;
+      }
+      &>.close{
+        display: block;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #home-page {
+
+    #left-navbar {
+      width: 100%;
+      box-shadow: none;
+    }
+
+    &>.content-container{
+      &>.content{
+        padding: 0 15px;
+      }
+    }
+  }
+}

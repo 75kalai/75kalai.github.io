@@ -1,0 +1,25 @@
+#top-navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 49;
+  display: none;
+  
+  .left{
+    margin: 20px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #333;
+    border-radius: 20px;
+    text-align: center;
+    $x:50px;
+    width: $x;
+    height: $x;
+    transition: background 0.1s;
+    cursor: pointer;
+
+    &:hover{
+      background: #454545;
+    }
+  }
+}
