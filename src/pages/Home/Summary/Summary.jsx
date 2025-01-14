@@ -58,8 +58,8 @@ function CompaniesBox({ className, companies }) {
           <div className="logo">
             <img src={obj.logoPath} alt={obj.imgAltText} />
             <div className="badge center">
-              <span className="num">{obj.experience}</span>
-              <span className="years">years</span>
+              <span className="num">{obj.experience?obj.experience:obj.projects}</span>
+              <span className="years">{obj.experience?"experience":"projects"}</span>
             </div>
           </div>
         ))}

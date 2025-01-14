@@ -1,6 +1,8 @@
 import PORTFOLIO_DATA_TYPE, { _companies } from "./portfolioDataType";
 import {
   BulbOutlined,
+  ClockCircleOutlined,
+  DollarOutlined,
   ExportOutlined,
   FieldTimeOutlined,
   GithubOutlined,
@@ -32,12 +34,12 @@ const KALAI_PORTFOLIO_DATA_AI: PORTFOLIO_DATA_TYPE = {
   introText: "Full stack Web Devlopment Expert",
   SUMMARY: {
     box1: {
-      title1: "3",
-      title2: "years of IT experience",
+      title1: "UI",
+      title2: "React, Astro, Next.js",
     },
     box2: {
-      title1: "React + Node",
-      title2: <b>Expert</b>,
+      title1: "Backend",
+      title2: "Node, Java, Sanity CMS",
     },
     box3: {
       title: "Professional Journey",
@@ -49,19 +51,21 @@ const KALAI_PORTFOLIO_DATA_AI: PORTFOLIO_DATA_TYPE = {
       title2: "Rapidly Prototyped Projects",
     },
     box5: {
-      title1: "10+",
-      title2: `years of coding experience`,
+      title1: "DB",
+      title2: `MySQL, PostgreSQL, MongoDB`,
     },
     box6: [
       {
         companyName: COMPANY.zoho.name,
-        experience: "2+",
+        // experience: "2+",
+        projects: "3",
         logoPath: COMPANY.zoho.logoPath,
         imgAltText: COMPANY.zoho.imgAltText,
       },
       {
         companyName: COMPANY.i2i.name,
-        experience: "1",
+        // experience: "1",
+        projects: "2",
         logoPath: COMPANY.i2i.logoPath,
         imgAltText: COMPANY.i2i.imgAltText,
       },
@@ -70,7 +74,14 @@ const KALAI_PORTFOLIO_DATA_AI: PORTFOLIO_DATA_TYPE = {
       title1: <FieldTimeOutlined />,
       title2: "Always On/Early Time Delivery",
     },
-    box8: { title1: <BulbOutlined />, title2: "Critical Thinking, Philosophy" },
+    box8: {
+      title1: (
+        <>
+          <DollarOutlined /> + <ClockCircleOutlined />
+        </>
+      ),
+      title2: "Save Money & Time with right resources.",
+    },
     box9: {
       title1: <LinkedinOutlined />,
       title2: (
@@ -98,7 +109,8 @@ const KALAI_PORTFOLIO_DATA_AI: PORTFOLIO_DATA_TYPE = {
       imgAltText: COMPANY.i2i.imgAltText,
       duration: "October 2024 - Present",
       description:
-        "Developed a Minimal Viable Product for automation in post-healthcare workflows using Robotic Process Automation (RPA).",
+        "The uLab Systems software is a comprehensive web application designed for orthodontic practices. It enables users to add patients, upload 3D scans, create treatment plans in collaboration with uAssist doctors, and order aligners, retainers, and other products. The platform streamlines the complete dental treatment process, from initial scans to ongoing patient care. The 3D processing module, built with WebAssembly (WASM) by the China team, integrates seamlessly with the broader workflow developed by the local team.",
+
       responsibilities: [
         "Maintained and enhanced the frontend architecture for the web application.",
         "Played a critical role in achieving the project’s first production release as the 3rd team member.",
@@ -112,7 +124,7 @@ const KALAI_PORTFOLIO_DATA_AI: PORTFOLIO_DATA_TYPE = {
       imgAltText: COMPANY.i2i.imgAltText,
       duration: "March 2024 - October 2024",
       description:
-        "The uLab Systems software is a comprehensive web application designed for orthodontic practices. It enables users to add patients, upload 3D scans, create treatment plans in collaboration with uAssist doctors, and order aligners, retainers, and other products. The platform streamlines the complete dental treatment process, from initial scans to ongoing patient care. The 3D processing module, built with WebAssembly (WASM) by the China team, integrates seamlessly with the broader workflow developed by the local team.",
+        "Developed a Minimal Viable Product for automation in post-healthcare workflows using Robotic Process Automation (RPA).",
       responsibilities: [
         "Built the project from scratch using React, Zustand, and Ant Design.",
         "Integrated the backend using Node.js and Feathers Framework.",
@@ -129,9 +141,12 @@ const KALAI_PORTFOLIO_DATA_AI: PORTFOLIO_DATA_TYPE = {
       description:
         "Integrated Zoho Sign with other Zoho Apps like Mail, Desk, Projects, and external apps like Box.",
       responsibilities: [
-        "Developed internal features and resolved bugs.",
-        "Provided technical support for clients and partners.",
+        "Integrated Zoho Sign with other Zoho Apps like Mail, Desk, Projects, and external apps like Box.",
+        "Worked in internal features and bug-fixes of Zoho sign.",
+        "Provided technical support for Zoho clients and Zoho Partners frequently",
         "Wrote a PHP SDK for Zoho Sign APIs.",
+        "Actively Participated in Zoho Sign's product design meetings, providing valuable suggestions and feedbacks",
+        "Wrote a script that helps to convert (json construction) code between 5 languages(Deluge, Script, Python, JS, Java, PHP)."
       ],
     },
   ],
@@ -181,19 +196,21 @@ const KALAI_PORTFOLIO_DATA_AI: PORTFOLIO_DATA_TYPE = {
       ],
     },
     {
-      position:"right",
-      title:"Professionally..",
-      content:[
-          `... I navigate the realm of software development, where I've honed my skills in a variety of Programming Languages, Project Domains, Programming Constructs, Data Structures and Algorithms, Computer Networks, and Software/System design`
-      ]
-    }
+      position: "right",
+      title: "Professionally..",
+      content: [
+        `... I navigate the realm of software development, where I've honed my skills in a variety of Programming Languages, Project Domains, Programming Constructs, Data Structures and Algorithms, Computer Networks, and Software/System design`,
+      ],
+    },
   ],
   CONTACT: [
     { contactMethod: "Location", description: "Chennai, TN, India" },
     { contactMethod: "Email", description: "75kalai@gmail.com" },
     { contactMethod: "Phone", description: "+91 73582 29808" },
   ],
-  RESUME: { path: "https://drive.google.com/file/d/1-AcTBwxH9s60-14E2Vla8F9IsS5-c7K_/view?usp=sharing" },
+  RESUME: {
+    path: "https://drive.google.com/file/d/1-AcTBwxH9s60-14E2Vla8F9IsS5-c7K_/view?usp=sharing",
+  },
 };
 
 export default KALAI_PORTFOLIO_DATA_AI;

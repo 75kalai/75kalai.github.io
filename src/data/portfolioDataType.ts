@@ -65,7 +65,8 @@ export type section_summary_box_type_2 = {
 
 export type section_summary_box_companies = {
   companyName: string;
-  experience: Number | string;
+  experience?: Number | string;
+  projects?: Number | string;
   logoPath: string;
   imgAltText?: string;
 };
